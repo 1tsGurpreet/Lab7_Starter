@@ -67,17 +67,20 @@ export class Router {
      *  4. Finally, call the stored function for the given page
      */
 
-    if(this[page] == null) console.log('ERROR');
+    if(this[page] == null){
+      console.log('ERROR');
+      return;
+    } 
 
     let hash;
 
-    if(page == 'home') hash = '';
+    if(page === 'home') hash = '';
     else{
       hash = '#' + page;
     }
     
     if(!statePopped && window.location.hash != hash){
-      history.pushState({'page' : page}, '', window.location + hash);
+      history.pushState({'page' : page}, '', window.location.pathname + hash);
     }
 
     this[page]();
