@@ -1,6 +1,6 @@
 // main.js
 
-import { Router } from './router.js';
+import { Router } from './Router.js';
 
 const recipes = [
   'https://introweb.tech/assets/json/ghostCookies.json',
@@ -10,7 +10,7 @@ const recipes = [
   'https://introweb.tech/assets/json/turkey.json',
   'https://introweb.tech/assets/json/pumpkinPie.json'
 ];
-const recipeData = {} // You can access all of the Recipe Data from the JSON files in this variable
+const recipeData = {}; // You can access all of the Recipe Data from the JSON files in this variable
 
 const router = new Router(function () {
   /** 
